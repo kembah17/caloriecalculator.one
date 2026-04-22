@@ -1,65 +1,256 @@
-import Image from "next/image";
+import Link from "next/link";
+import AdSlot from "@/components/ui/AdSlot";
+import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
-export default function Home() {
+const tools = [
+  {
+    name: "Calorie Calculator",
+    href: "/calorie-calculator",
+    description: "Calculate your daily calorie needs based on age, gender, activity level, and weight goals using the Mifflin-St Jeor equation.",
+    icon: "🔥",
+  },
+  {
+    name: "TDEE Calculator",
+    href: "/tdee-calculator",
+    description: "Find your Total Daily Energy Expenditure across all activity levels. Compare Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas.",
+    icon: "⚡",
+  },
+  {
+    name: "BMR Calculator",
+    href: "/bmr-calculator",
+    description: "Calculate your Basal Metabolic Rate using three scientifically validated formulas. Understand your body's energy needs at rest.",
+    icon: "💓",
+  },
+  {
+    name: "Macro Calculator",
+    href: "/macro-calculator",
+    description: "Get your ideal macronutrient breakdown for protein, carbs, and fat. Choose from preset diet plans or create custom ratios.",
+    icon: "🥗",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <WebSiteSchema />
+
+      {/* Hero Section */}
+      <section style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <h1
+          style={{
+            fontSize: "clamp(2rem, 5vw, 3rem)",
+            fontWeight: 800,
+            color: "var(--color-text)",
+            marginBottom: "1rem",
+            lineHeight: 1.2,
+          }}
+        >
+          Free Online{" "}
+          <span style={{ color: "var(--color-primary)" }}>Calorie &amp; Nutrition</span>{" "}
+          Calculators
+        </h1>
+        <p
+          style={{
+            fontSize: "1.125rem",
+            color: "var(--color-text-secondary)",
+            maxWidth: "700px",
+            margin: "0 auto 2rem",
+            lineHeight: 1.7,
+          }}
+        >
+          Science-based nutrition tools powered by the Mifflin-St Jeor, Harris-Benedict, and
+          Katch-McArdle equations. Calculate your daily calorie needs, TDEE, BMR, and ideal
+          macronutrient ratios — all 100% free and private.
+        </p>
+      </section>
+
+      <AdSlot slot="leaderboard" />
+
+      {/* Tool Grid */}
+      <section
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "1.5rem",
+          marginBottom: "3rem",
+        }}
+      >
+        {tools.map((tool) => (
+          <Link
+            key={tool.href}
+            href={tool.href}
+            style={{
+              display: "block",
+              padding: "1.5rem",
+              backgroundColor: "var(--color-surface)",
+              border: "1px solid var(--color-border)",
+              borderRadius: "var(--radius-lg)",
+              boxShadow: "var(--shadow-md)",
+              textDecoration: "none",
+              transition: "box-shadow 0.2s, border-color 0.2s, transform 0.2s",
+            }}
+          >
+            <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{tool.icon}</div>
+            <h2
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: 700,
+                color: "var(--color-text)",
+                marginBottom: "0.5rem",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              {tool.name}
+            </h2>
+            <p
+              style={{
+                color: "var(--color-text-secondary)",
+                fontSize: "0.9375rem",
+                lineHeight: 1.6,
+              }}
             >
-              Learning
-            </a>{" "}
-            center.
+              {tool.description}
+            </p>
+            <span
+              style={{
+                display: "inline-block",
+                marginTop: "0.75rem",
+                color: "var(--color-primary)",
+                fontWeight: 600,
+                fontSize: "0.875rem",
+              }}
+            >
+              Use Calculator →
+            </span>
+          </Link>
+        ))}
+      </section>
+
+      <AdSlot slot="in-content" />
+
+      {/* SEO Content */}
+      <section className="card" style={{ marginBottom: "2rem" }}>
+        <h2
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: 700,
+            color: "var(--color-text)",
+            marginBottom: "1rem",
+          }}
+        >
+          Understanding Your Calorie Needs
+        </h2>
+        <div
+          style={{
+            color: "var(--color-text-secondary)",
+            fontSize: "0.9375rem",
+            lineHeight: 1.8,
+          }}
+        >
+          <p style={{ marginBottom: "1rem" }}>
+            Calories are the fundamental unit of energy that fuels every process in your body — from
+            breathing and circulating blood to exercising and thinking. Understanding how many
+            calories your body needs each day is the cornerstone of effective nutrition planning,
+            whether your goal is weight loss, muscle gain, or maintaining a healthy weight.
+          </p>
+          <p style={{ marginBottom: "1rem" }}>
+            Your daily calorie needs are determined by two primary factors: your <strong>Basal
+            Metabolic Rate (BMR)</strong> and your <strong>activity level</strong>. BMR represents
+            the number of calories your body burns at complete rest — just to keep your organs
+            functioning, your heart beating, and your lungs breathing. This typically accounts for
+            60-75% of your total daily energy expenditure.
+          </p>
+          <p style={{ marginBottom: "1rem" }}>
+            When you add physical activity on top of your BMR, you get your <strong>Total Daily
+            Energy Expenditure (TDEE)</strong>. This is the total number of calories you burn in a
+            day, and it&apos;s the number you need to know to manage your weight effectively. Eat
+            fewer calories than your TDEE to lose weight, eat more to gain weight, or match it to
+            maintain your current weight.
+          </p>
+          <p style={{ marginBottom: "1rem" }}>
+            Our calculators use scientifically validated formulas trusted by nutritionists and
+            healthcare professionals worldwide. The <strong>Mifflin-St Jeor equation</strong>,
+            developed in 1990, is considered the most accurate for estimating BMR in most
+            populations. The <strong>Harris-Benedict equation</strong>, revised in 1984, provides a
+            reliable comparison. For those who know their body fat percentage, the{" "}
+            <strong>Katch-McArdle formula</strong> offers the most precise estimate by factoring in
+            lean body mass.
+          </p>
+          <p style={{ marginBottom: "1rem" }}>
+            Beyond calories, <strong>macronutrients</strong> — protein, carbohydrates, and fat —
+            play crucial roles in body composition, energy levels, and overall health. Protein
+            supports muscle repair and growth (4 calories per gram), carbohydrates provide quick
+            energy for your brain and muscles (4 calories per gram), and dietary fat supports
+            hormone production and nutrient absorption (9 calories per gram).
+          </p>
+          <p>
+            All our tools run entirely in your browser — your personal data is never sent to any
+            server. Use our suite of calculators to build a complete picture of your nutritional
+            needs and take control of your health journey with science-backed precision.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Why Use Our Calculators */}
+      <section className="card" style={{ marginBottom: "2rem" }}>
+        <h2
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: 700,
+            color: "var(--color-text)",
+            marginBottom: "1rem",
+          }}
+        >
+          Why Use Our Calculators?
+        </h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          {[
+            {
+              title: "Science-Based Formulas",
+              desc: "We use peer-reviewed equations (Mifflin-St Jeor, Harris-Benedict, Katch-McArdle) trusted by nutritionists worldwide.",
+              icon: "🧪",
+            },
+            {
+              title: "100% Private",
+              desc: "All calculations happen in your browser. Your personal health data is never sent to any server or stored anywhere.",
+              icon: "🔒",
+            },
+            {
+              title: "Completely Free",
+              desc: "No sign-ups, no subscriptions, no hidden fees. Professional-grade nutrition tools available to everyone.",
+              icon: "🆓",
+            },
+            {
+              title: "Multiple Formulas",
+              desc: "Compare results from different equations side by side to get the most accurate estimate for your body type.",
+              icon: "📊",
+            },
+          ].map((item) => (
+            <div key={item.title}>
+              <div style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>{item.icon}</div>
+              <h3
+                style={{
+                  fontWeight: 600,
+                  color: "var(--color-text)",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                {item.title}
+              </h3>
+              <p style={{ color: "var(--color-text-muted)", fontSize: "0.875rem", lineHeight: 1.6 }}>
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <AdSlot slot="footer" />
+    </>
   );
 }
