@@ -95,12 +95,12 @@ export default function BMRCalculatorPage() {
 
   const getResultsText = () => {
     if (!results) return "";
-    let text = "BMR Calculator Results\n\n";
-    text += "Mifflin-St Jeor: " + results.msj + " cal/day\n";
-    text += "Harris-Benedict: " + results.hb + " cal/day\n";
-    if (results.km) text += "Katch-McArdle: " + results.km + " cal/day\n";
-    text += "\nAverage BMR: " + results.avg + " cal/day\n";
-    text += "Hourly burn rate: ~" + results.hourly + " cal/hour";
+    let text = `BMR Calculator Results\n\n`;
+    text += `Mifflin-St Jeor: ${results.msj} cal/day\n`;
+    text += `Harris-Benedict: ${results.hb} cal/day\n`;
+    if (results.km) text += `Katch-McArdle: ${results.km} cal/day\n`;
+    text += `\nAverage BMR: ${results.avg} cal/day\n`;
+    text += `Hourly burn rate: ~${results.hourly} cal/hour`;
     return text;
   };
 
@@ -257,64 +257,25 @@ export default function BMRCalculatorPage() {
               <h3 style={{ fontSize: "0.9375rem", fontWeight: 600, color: "var(--color-text)", marginBottom: "0.5rem" }}>Factors That Affect Your BMR</h3>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.5rem" }}>
                 {[
-                  { factor: "Muscle Mass", effect: "More muscle = higher BMR", icon: "+" },
-                  { factor: "Age", effect: "BMR decreases ~1-2% per decade", icon: "-" },
-                  { factor: "Body Size", effect: "Larger bodies burn more at rest", icon: "+" },
-                  { factor: "Crash Dieting", effect: "Can lower BMR by 20%+", icon: "-" },
-                ].map((f) => (
-                  <div key={f.factor} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
-                    <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "1.25rem", height: "1.25rem", borderRadius: "50%", backgroundColor: f.icon === "+" ? "#DEF7EC" : "#FDE8E8", color: f.icon === "+" ? "#059669" : "#DC2626", fontSize: "0.75rem", fontWeight: 700, flexShrink: 0 }}>{f.icon}</span>
-                    <div>
-                      <div style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--color-text)" }}>{f.factor}</div>
-                      <div style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>{f.effect}</div>
-                    </div>
+                  { factor: "Muscle Mass", effect: "More muscle = higher BMR", icon: "💪" },
+                  { factor: "Age", effect: "BMR decreases with age", icon: "📅" },
+                  { factor: "Body Size", effect: "Larger bodies need more energy", icon: "📏" },
+                  { factor: "Genetics", effect: "Natural metabolic variation", icon: "🧬" },
+                  { factor: "Hormones", effect: "Thyroid affects metabolism", icon: "⚡" },
+                ].map((item, i) => (
+                  <div key={i} style={{ padding: "0.5rem", backgroundColor: "var(--color-surface)", borderRadius: "0.375rem", border: "1px solid var(--color-border-light)" }}>
+                    <div style={{ fontSize: "1rem", marginBottom: "0.125rem" }}>{item.icon} <strong>{item.factor}</strong></div>
+                    <div style={{ fontSize: "0.8125rem", color: "var(--color-text-muted)" }}>{item.effect}</div>
                   </div>
                 ))}
               </div>
             </div>
-
-            <div className="disclaimer">
-              This calculator provides estimates based on scientific formulas. Consult a healthcare professional for personalized advice.
-            </div>
           </div>
         )}
 
-        <AdSlot slot="below-results" />
-
-        {/* How-to Guide */}
-        <div className="card" style={{ marginBottom: "1.5rem" }}>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--color-text)", marginBottom: "1rem" }}>
-            Understanding Basal Metabolic Rate (BMR)
-          </h2>
-          <div style={{ color: "var(--color-text-secondary)", fontSize: "0.9375rem", lineHeight: 1.8 }}>
-            <p style={{ marginBottom: "1rem" }}>
-              Your Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain essential life functions. Think of it as the energy cost of simply being alive &mdash; your heart beating, lungs breathing, brain functioning, and cells regenerating. For most people, BMR accounts for 60-75% of total daily calorie expenditure, making it the single largest component of your energy budget.
-            </p>
-            <p style={{ marginBottom: "1rem" }}>
-              <strong>The Three Formulas Explained:</strong> Our calculator uses three well-established equations. The Mifflin-St Jeor equation (1990) is the most widely recommended by nutrition professionals and the Academy of Nutrition and Dietetics. It uses your weight, height, age, and gender. The Harris-Benedict equation (revised 1984) is one of the oldest and most cited BMR formulas. The Katch-McArdle formula takes a different approach by using lean body mass, making it potentially more accurate for athletes or anyone who knows their body fat percentage.
-            </p>
-            <p style={{ marginBottom: "1rem" }}>
-              <strong>Why BMR Matters:</strong> Understanding your BMR is crucial for several reasons. First, it sets the absolute minimum calorie intake you should consider. Consistently eating below your BMR can trigger metabolic adaptation, where your body slows its metabolism to conserve energy &mdash; making weight loss harder, not easier. Second, BMR helps you understand how your body uses energy, which is essential for setting realistic nutrition goals.
-            </p>
-            <p style={{ marginBottom: "1rem" }}>
-              <strong>BMR vs. TDEE:</strong> While BMR measures calories burned at rest, your Total Daily Energy Expenditure (TDEE) includes all activity. To find your TDEE, multiply your BMR by an activity factor (1.2 for sedentary up to 1.9 for extremely active). Your TDEE is the number you should use for meal planning, not your BMR alone.
-            </p>
-            <p>
-              <strong>Improving Your BMR:</strong> The most effective way to increase your BMR is through resistance training. Each pound of muscle burns approximately 6-7 calories per day at rest, compared to 2-3 calories for fat. Over time, building even 5-10 pounds of muscle can meaningfully increase your daily calorie burn. Adequate protein intake, quality sleep, and avoiding prolonged extreme calorie restriction also help maintain a healthy metabolic rate.
-            </p>
-          </div>
-        </div>
-
-        <AdSlot slot="in-content" />
-
-        <div style={{ marginBottom: "2rem" }}>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--color-text)", marginBottom: "1rem" }}>Frequently Asked Questions</h2>
-          <FAQ items={faqs} />
-        </div>
-
-        <RelatedTools current="/bmr-calculator" />
-        <AdSlot slot="footer" />
+        <AdSlot slot="leaderboard" />
       </div>
     </>
   );
 }
+
