@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+
+// GSC verification loaded from env
+const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
 export const metadata: Metadata = {
+  ...(gscVerification && { verification: { google: gscVerification } }),
   metadataBase: new URL("https://caloriecalculator.one"),
   title: {
     default: "Calorie Calculator - Free Online Calorie & Nutrition Tools | CalorieCalculator.one",
@@ -69,6 +74,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <GoogleAnalytics />
         <Header />
         <main
           style={{
