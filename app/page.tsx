@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HomeToolGrid from "@/components/ui/HomeToolGrid";
 import AdSlot from "@/components/ui/AdSlot";
 import WebSiteSchema from "@/components/seo/WebSiteSchema";
 
@@ -66,63 +67,9 @@ export default function HomePage() {
 
       <AdSlot slot="leaderboard" />
 
-      {/* Tool Grid */}
-      <section
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "1.5rem",
-          marginBottom: "3rem",
-        }}
-      >
-        {tools.map((tool) => (
-          <Link
-            key={tool.href}
-            href={tool.href}
-            style={{
-              display: "block",
-              padding: "1.5rem",
-              backgroundColor: "var(--color-surface)",
-              border: "1px solid var(--color-border)",
-              borderRadius: "var(--radius-lg)",
-              boxShadow: "var(--shadow-md)",
-              textDecoration: "none",
-              transition: "box-shadow 0.2s, border-color 0.2s, transform 0.2s",
-            }}
-          >
-            <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{tool.icon}</div>
-            <h2
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: 700,
-                color: "var(--color-text)",
-                marginBottom: "0.5rem",
-              }}
-            >
-              {tool.name}
-            </h2>
-            <p
-              style={{
-                color: "var(--color-text-secondary)",
-                fontSize: "0.9375rem",
-                lineHeight: 1.6,
-              }}
-            >
-              {tool.description}
-            </p>
-            <span
-              style={{
-                display: "inline-block",
-                marginTop: "0.75rem",
-                color: "var(--color-primary)",
-                fontWeight: 600,
-                fontSize: "0.875rem",
-              }}
-            >
-              Use Calculator →
-            </span>
-          </Link>
-        ))}
+            {/* Tool Grid */}
+      <section style={{ marginBottom: "3rem" }}>
+        <HomeToolGrid tools={tools} />
       </section>
 
       <AdSlot slot="in-content" />

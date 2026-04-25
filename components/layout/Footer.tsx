@@ -53,10 +53,10 @@ export default function Footer() {
               Calculators
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-              <Link href="/calorie-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>Calorie Calculator</Link>
-              <Link href="/tdee-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>TDEE Calculator</Link>
-              <Link href="/bmr-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>BMR Calculator</Link>
-              <Link href="/macro-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>Macro Calculator</Link>
+              <Link href="/calorie-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>🔥 Calorie Calculator</Link>
+              <Link href="/tdee-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>⚡ TDEE Calculator</Link>
+              <Link href="/bmr-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>💓 BMR Calculator</Link>
+              <Link href="/macro-calculator" style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", textDecoration: "none" }}>🥗 Macro Calculator</Link>
             </div>
           </div>
           <div>
