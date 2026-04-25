@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "What are macronutrients and why do they matter?",
     answer:
-      "Macronutrients are the three main nutrients your body needs in large amounts: protein (4 cal/g), carbohydrates (4 cal/g), and fat (9 cal/g). Each plays a unique role \u2014 protein builds and repairs tissue, carbs provide energy, and fats support hormones and cell function. The ratio you eat them in affects body composition, energy levels, and overall health.",
+      "Macronutrients are the three main nutrients your body needs in large amounts: protein (4 cal/g), carbohydrates (4 cal/g), and fat (9 cal/g). Each plays a unique role — protein builds and repairs tissue, carbs provide energy, and fats support hormones and cell function. The ratio you eat them in affects body composition, energy levels, and overall health.",
   },
   {
     question: "How do I choose the right macro ratio?",
@@ -148,7 +148,7 @@ export default function MacroCalculatorPage() {
             <div style={{ marginBottom: "1.5rem", padding: "1rem", backgroundColor: "var(--color-surface-alt)", borderRadius: "var(--radius-md)", border: "1px solid var(--color-border-light)" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
                 <span style={{ fontWeight: 600, fontSize: "0.875rem", color: "var(--color-text)" }}>Custom Ratios</span>
-                <span style={{ fontSize: "0.875rem", fontWeight: 600, color: customTotal === 100 ? "var(--color-primary)" : "#DC2626" }}>Total: {customTotal}%{customTotal !== 100 ? " (must be 100%)" : " \u2713"}</span>
+                <span style={{ fontSize: "0.875rem", fontWeight: 600, color: customTotal === 100 ? "var(--color-primary)" : "#DC2626" }}>Total: {customTotal}%{customTotal !== 100 ? " (must be 100%)" : " ✓"}</span>
               </div>
               {[
                 { label: "Carbs", value: customCarbs, setter: setCustomCarbs, color: "#3B82F6" },
