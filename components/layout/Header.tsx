@@ -47,23 +47,11 @@ export default function Header() {
             textDecoration: "none",
           }}
         >
-          <span
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "2rem",
-              height: "2rem",
-              borderRadius: "var(--radius-md)",
-              backgroundColor: "var(--color-primary)",
-              color: "#FFFFFF",
-              fontSize: "1rem",
-              fontWeight: 800,
-            }}
-          >
-            C
-          </span>
-          <span>CalorieCalc</span>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+            <path d="M18 8c0 0-6 6-6 12a6 6 0 0012 0c0-2-1-4-3-6 0 0-1 3-3 3s-2-3 0-6c-2 1-3 3-3 5a3 3 0 006 0c0-3-3-8-3-8z" fill="white"/>
+          </svg>
+          <span>caloriecalculator<span style={{ color: "var(--color-primary)" }}>.one</span></span>
         </Link>
 
         {/* Desktop nav */}

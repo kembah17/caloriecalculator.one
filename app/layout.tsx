@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   ...(gscVerification && { verification: { google: gscVerification } }),
   metadataBase: new URL("https://caloriecalculator.one"),
   title: {
-    default: "Calorie Calculator - Free Online Calorie & Nutrition Tools | CalorieCalculator.one",
-    template: "%s | CalorieCalculator.one",
+    default: "Calorie Calculator - Free Online Calorie & Nutrition Tools | caloriecalculator.one",
+    template: "%s | caloriecalculator.one",
   },
   description:
     "Free online calorie calculator, TDEE calculator, BMR calculator, and macro calculator. Science-based nutrition tools using Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://caloriecalculator.one",
-    siteName: "CalorieCalculator.one",
+    siteName: "caloriecalculator.one",
     title: "Calorie Calculator - Free Online Calorie & Nutrition Tools",
     description:
       "Free online calorie calculator, TDEE calculator, BMR calculator, and macro calculator. Science-based nutrition tools.",

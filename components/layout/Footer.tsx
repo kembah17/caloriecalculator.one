@@ -31,9 +31,16 @@ export default function Footer() {
                 fontSize: "1.125rem",
                 color: "var(--color-footer-text)",
                 marginBottom: "0.75rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
               }}
             >
-              CalorieCalculator.one
+              <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+                <path d="M18 8c0 0-6 6-6 12a6 6 0 0012 0c0-2-1-4-3-6 0 0-1 3-3 3s-2-3 0-6c-2 1-3 3-3 5a3 3 0 006 0c0-3-3-8-3-8z" fill="white"/>
+              </svg>
+              caloriecalculator.one
             </h3>
             <p style={{ color: "var(--color-footer-muted)", fontSize: "0.875rem", lineHeight: 1.6 }}>
               Free online calorie and nutrition calculators. Calculate your daily calorie needs, TDEE, BMR, and macronutrient targets.
@@ -87,7 +94,7 @@ export default function Footer() {
             fontSize: "0.8125rem",
           }}
         >
-          © {new Date().getFullYear()} CalorieCalculator.one. All rights reserved. For informational purposes only.
+          © {new Date().getFullYear()} caloriecalculator.one. All rights reserved. For informational purposes only.
         </div>
       </div>
     </footer>

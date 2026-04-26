@@ -53,7 +53,7 @@ export default function HomePage() {
         <p
           style={{
             fontSize: "1.125rem",
-            color: "var(--color-text-secondary)",
+            color: "var(--color-text)",
             maxWidth: "700px",
             margin: "0 auto 2rem",
             lineHeight: 1.7,
@@ -88,7 +88,7 @@ export default function HomePage() {
         </h2>
         <div
           style={{
-            color: "var(--color-text-secondary)",
+            color: "var(--color-text)",
             fontSize: "0.9375rem",
             lineHeight: 1.8,
           }}
