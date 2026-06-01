@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     title: "Calorie Calculator - Free Online Calorie & Nutrition Tools",
     description:
       "Free online calorie calculator, TDEE calculator, BMR calculator, and macro calculator. Science-based nutrition tools.",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Calorie Calculator' }],
   },
   twitter: {
     card: "summary_large_image",
