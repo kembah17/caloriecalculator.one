@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Calorie Calculator — Daily Calorie Needs | CalorieCalculator.one",
   description: "Calculate your daily calorie needs with the Mifflin-St Jeor equation. Factor in age, gender, height, weight, activity level, and weight goals for accurate results.",
-  alternates: { canonical: "https://caloriecalculator.one/calorie-calculator" },
+  alternates: { canonical: "https://www.caloriecalculator.one/calorie-calculator" },
   openGraph: {
     title: "Calorie Calculator — Daily Calorie Needs | CalorieCalculator.one",
     description: "Calculate your daily calorie needs with the Mifflin-St Jeor equation. Factor in age, gender, height, weight, activity level, and weight goals for accurate results.",
-    url: "https://caloriecalculator.one/calorie-calculator",
+    url: "https://www.caloriecalculator.one/calorie-calculator",
     siteName: "CalorieCalculator.one",
     type: "website",
   },

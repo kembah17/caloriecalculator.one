@@ -3,11 +3,11 @@ import AdSlot from "@/components/ui/AdSlot";
 export const metadata = {
   title: "Privacy Policy | CalorieCalculator.one",
   description: "Privacy policy for CalorieCalculator.one. All calculations run client-side. We never collect or store your personal health data.",
-  alternates: { canonical: "https://caloriecalculator.one/privacy" },
+  alternates: { canonical: "https://www.caloriecalculator.one/privacy" },
   openGraph: {
     title: "Privacy Policy | CalorieCalculator.one",
     description: "Privacy policy for CalorieCalculator.one. All calculations run client-side.",
-    url: "https://caloriecalculator.one/privacy",
+    url: "https://www.caloriecalculator.one/privacy",
     siteName: "CalorieCalculator.one",
     type: "website",
   },

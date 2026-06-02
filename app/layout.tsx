@@ -9,7 +9,7 @@ const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
 export const metadata: Metadata = {
   ...(gscVerification && { verification: { google: gscVerification } }),
-  metadataBase: new URL("https://caloriecalculator.one"),
+  metadataBase: new URL("https://www.caloriecalculator.one"),
   title: {
     default: "Calorie Calculator - Free Online Calorie & Nutrition Tools | caloriecalculator.one",
     template: "%s | caloriecalculator.one",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://caloriecalculator.one",
+    url: "https://www.caloriecalculator.one",
     siteName: "caloriecalculator.one",
     title: "Calorie Calculator - Free Online Calorie & Nutrition Tools",
     description:
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://caloriecalculator.one",
+    canonical: "https://www.caloriecalculator.one",
   },
 };
 

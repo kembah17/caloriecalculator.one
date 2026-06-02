@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://caloriecalculator.one',
+  siteUrl: 'https://www.caloriecalculator.one',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   outDir: './out',

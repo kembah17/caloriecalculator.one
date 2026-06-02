@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "BMR Calculator — Basal Metabolic Rate | CalorieCalculator.one",
   description: "Calculate your Basal Metabolic Rate using three scientific formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle. Compare results side by side.",
-  alternates: { canonical: "https://caloriecalculator.one/bmr-calculator" },
+  alternates: { canonical: "https://www.caloriecalculator.one/bmr-calculator" },
   openGraph: {
     title: "BMR Calculator — Basal Metabolic Rate | CalorieCalculator.one",
     description: "Calculate your Basal Metabolic Rate using three scientific formulas: Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle. Compare results side by side.",
-    url: "https://caloriecalculator.one/bmr-calculator",
+    url: "https://www.caloriecalculator.one/bmr-calculator",
     siteName: "CalorieCalculator.one",
     type: "website",
   },
