@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.caloriecalculator.one
+
+# Sitemaps
+Sitemap: https://www.caloriecalculator.one/sitemap.xml
