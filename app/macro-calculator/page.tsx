@@ -152,7 +152,7 @@ export default function MacroCalculatorPage() {
               </div>
               {[
                 { label: "Carbs", value: customCarbs, setter: setCustomCarbs, color: "#3B82F6" },
-                { label: "Protein", value: customProtein, setter: setCustomProtein, color: "#059669" },
+                { label: "Protein", value: customProtein, setter: setCustomProtein, color: "#047857" },
                 { label: "Fat", value: customFat, setter: setCustomFat, color: "#F59E0B" },
               ].map((s) => (
                 <div key={s.label} style={{ marginBottom: "0.75rem" }}>
@@ -206,7 +206,7 @@ export default function MacroCalculatorPage() {
                   width: "100%", height: "100%", borderRadius: "50%",
                   background: `conic-gradient(
                     #3B82F6 0% ${results.carbs.pct}%,
-                    #059669 ${results.carbs.pct}% ${results.carbs.pct + results.protein.pct}%,
+                    #047857 ${results.carbs.pct}% ${results.carbs.pct + results.protein.pct}%,
                     #F59E0B ${results.carbs.pct + results.protein.pct}% 100%
                   )`,
                 }} />
@@ -221,7 +221,7 @@ export default function MacroCalculatorPage() {
             <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
               {[
                 { label: "Carbs", color: "#3B82F6", pct: results.carbs.pct },
-                { label: "Protein", color: "#059669", pct: results.protein.pct },
+                { label: "Protein", color: "#047857", pct: results.protein.pct },
                 { label: "Fat", color: "#F59E0B", pct: results.fat.pct },
               ].map((l) => (
                 <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "0.375rem" }}>
@@ -235,7 +235,7 @@ export default function MacroCalculatorPage() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.75rem", marginBottom: "1.5rem" }}>
               {[
                 { label: "Carbs", data: results.carbs, color: "#3B82F6", calPerG: 4 },
-                { label: "Protein", data: results.protein, color: "#059669", calPerG: 4 },
+                { label: "Protein", data: results.protein, color: "#047857", calPerG: 4 },
                 { label: "Fat", data: results.fat, color: "#F59E0B", calPerG: 9 },
               ].map((m) => (
                 <div key={m.label} style={{ padding: "1rem", backgroundColor: "var(--color-surface-alt)", borderRadius: "var(--radius-md)", border: "1px solid var(--color-border-light)", textAlign: "center", borderTop: `3px solid ${m.color}` }}>
@@ -255,7 +255,7 @@ export default function MacroCalculatorPage() {
                   <thead>
                     <tr style={{ borderBottom: "2px solid var(--color-border)" }}>
                       <th style={{ textAlign: "left", padding: "0.5rem", color: "var(--color-text)", fontWeight: 600 }}>Meal</th>
-                      <th style={{ textAlign: "right", padding: "0.5rem", color: "#059669", fontWeight: 600 }}>Protein</th>
+                      <th style={{ textAlign: "right", padding: "0.5rem", color: "#047857", fontWeight: 600 }}>Protein</th>
                       <th style={{ textAlign: "right", padding: "0.5rem", color: "#3B82F6", fontWeight: 600 }}>Carbs</th>
                       <th style={{ textAlign: "right", padding: "0.5rem", color: "#F59E0B", fontWeight: 600 }}>Fat</th>
                       <th style={{ textAlign: "right", padding: "0.5rem", color: "var(--color-text)", fontWeight: 600 }}>Calories</th>
