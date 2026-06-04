@@ -51,7 +51,7 @@ export default function Header() {
             <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
             <path d="M18 8c0 0-6 6-6 12a6 6 0 0012 0c0-2-1-4-3-6 0 0-1 3-3 3s-2-3 0-6c-2 1-3 3-3 5a3 3 0 006 0c0-3-3-8-3-8z" fill="white"/>
           </svg>
-          <span>caloriecalculator<span style={{ color: "var(--color-primary)" }}>.one</span></span>
+          <span>caloriecalculator<span className="brand-suffix" style={{ color: "var(--color-primary)" }}>.one</span></span>
         </Link>
 
         {/* Desktop nav */}

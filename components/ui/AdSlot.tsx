@@ -1,6 +1,6 @@
 export default function AdSlot({ slot }: { slot: string }) {
   return (
-    <div className="ad-slot" data-ad-slot={slot} style={{ margin: "1.5rem 0" }}>
+    <div className="ad-slot ad-slot-container" data-ad-slot={slot} style={{ margin: "1.5rem 0" }}>
       <div
         style={{
           backgroundColor: "var(--color-surface-alt)",
